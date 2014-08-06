@@ -1,0 +1,29 @@
+{
+  "name": "data-binding-watch",
+  "version": "0.0.1",
+  "description": "A html watch with data-bindings samples",
+  "main": "index.html",
+  "dependencies": {
+    "d3": "^3.4.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leobalter/data-binding-watch.git"
+  },
+  "keywords": [
+    "proxy",
+    "observer",
+    "databinding",
+    "datavis"
+  ],
+  "author": "Leo Balter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leobalter/data-binding-watch/issues"
+  },
+  "homepage": "https://github.com/leobalter/data-binding-watch"
+}
