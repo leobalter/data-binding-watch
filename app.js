@@ -2,15 +2,15 @@
 var d, chart, now, names, watch,
 	proxy, step;
 
-d = new Date();
+start = new Date();
 chart = {};
 now = {
-	month: [ d.getMonth() + 1, 12 ],
-	week: [ d.getDay(), 6 ],
-	day: [ d.getDate(), 31 ],
-	hours: [ d.getHours(), 24 ],
-	minutes: [ d.getMinutes(), 60 ],
-	secs: [ d.getSeconds(), 60 ]
+	month: [ start.getMonth() + 1, 12 ],
+	week: [ start.getDay(), 6 ],
+	day: [ start.getDate(), 31 ],
+	hours: [ start.getHours(), 24 ],
+	minutes: [ start.getMinutes(), 60 ],
+	secs: [ start.getSeconds(), 60 ]
 };
 
 names = {};
@@ -66,8 +66,14 @@ function createChart( name, item ) {
 	});
 }
 
+var last = start;
+
 function makeStep() {
 	var d = new Date();
+
+	console.log( ( d - last ) / 1000 );
+
+	last = d;
 
 	this.month = [ d.getMonth() + 1, 12 ];
 	this.week = [ d.getDay(), 6 ];
