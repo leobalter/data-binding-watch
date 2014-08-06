@@ -81,8 +81,6 @@ function makeStep() {
 	this.hours = [ d.getHours(), 24 ];
 	this.minutes = [ d.getMinutes(), 60 ];
 	this.secs = [ d.getSeconds(), 60 ];
-
-	setTimeout( step, 1000 );
 }
 
 if ( window.Proxy ) {
@@ -122,6 +120,6 @@ if ( window.Proxy ) {
 	step = makeStep.bind( now );
 }
 
-step();
+setInterval( step, 1000 );
 
 })();
